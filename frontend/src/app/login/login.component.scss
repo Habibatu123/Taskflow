@@ -1,0 +1,21 @@
+main{
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
+    flex-direction: column;
+}
+
+form{
+    max-width: 400px;
+ input,
+ button{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ }
+}
