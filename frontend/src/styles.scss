@@ -1,5 +1,27 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    list-style: none;
+}
+
+:root {
+    --primary-color: #ee62e2;
+    --background-color: #F2F2F2;
+    --card-color: #CCCCCC;
+    --task-card-color: #B3B3B3;
+    --task-detail-card-color: #F2F2F2;
+    --text-color: #333333;
+    --border-color: #ddd;
+    --priority-high: #de3f3f;
+    --priority-medium: #ff9900;
+    --priority-low: #00cc00;
+}
+
+html,
+body {
+    background-color: var(--background-color);
 }

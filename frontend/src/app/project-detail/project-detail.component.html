@@ -1,0 +1,105 @@
+<main>
+  @if(project){
+  <nav>
+    <h1>{{ project.name }}</h1>
+  </nav>
+  <header>
+    <h2>Boards</h2>
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <rect x="10" width="4" height="24" />
+        <rect
+          x="10"
+          width="4"
+          height="24"
+          transform="translate(24 0) rotate(90)"
+        />
+      </svg>
+      <span>New Board</span>
+    </button>
+  </header>
+  <div class="board-wrapper">
+    <ul class="board-list">
+      @for (board of project.boards; track $index) {
+      <li class="board-item">
+        <p class="board-name">{{ board.name }}</p>
+        @if(board.description){
+        <p class="board-description">{{ board.description }}</p>
+        }
+        <div
+          cdkDropList
+          class="task-list"
+          (cdkDropListDropped)="taskDrop($event, board)"
+        >
+          @for (task of sortTasksByOrder(board.tasks); track task) {
+          <div cdkDrag class="task-item" (click)="selectTask(task)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path
+                d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,12.67A4.67,4.67,0,1,1,12.66,8,4.67,4.67,0,0,1,8,12.67Z"
+              />
+            </svg>
+            <p class="task-name">{{ task.name }}</p>
+            @if(task.dueDate){
+            <span class="task-due-date"
+              >Due: {{ task.dueDate | date : "short" }}</span
+            >
+            }
+            <span class="priority" [ngClass]="task.priority">{{
+              task.priority
+            }}</span>
+          </div>
+          }
+        </div>
+        <button>New Task</button>
+      </li>
+      }
+    </ul>
+  </div>
+  }
+</main>
+
+@if(taskModalContext.isOpen && taskModalContext.task){
+<div class="task-detail-wrapper">
+  <div class="backdrop" (click)="taskModalContext.isOpen = false"></div>
+  <div class="task-detail">
+    <div class="task-name-wrapper">
+      <label>Task Name</label>
+      <input
+        type="text"
+        placeholder="Task Name"
+        [(ngModel)]="taskModalContext.task.name"
+      />
+    </div>
+
+    <div class="task-priority-wrapper">
+      <label>Priority</label>
+      <input
+        type="text"
+        placeholder="Task Name"
+        [(ngModel)]="taskModalContext.task.name"
+      />
+    </div>
+
+    <div class="task-status-wrapper">
+      <label>Status</label>
+      <input
+        type="text"
+        placeholder="Task Name"
+        [(ngModel)]="taskModalContext.task.name"
+      />
+    </div>
+
+    <div class="task-deadline-wrapper">
+      <label>Deadline</label>
+      <input
+        type="text"
+        placeholder="Task Name"
+        [(ngModel)]="taskModalContext.task.name"
+      />
+    </div>
+
+    <button class="cancel-btn">Cancel</button>
+    <button class="save-btn">Save</button>
+  </div>
+</div>
+}
