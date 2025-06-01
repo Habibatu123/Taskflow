@@ -16,6 +16,8 @@
     --task-detail-card-color: #F2F2F2;
     --text-color: #333333;
     --border-color: #ddd;
+    --input-border-color: #262626;
+    --input-bg-color: #E6E6E6;
     --priority-high: #de3f3f;
     --priority-medium: #ff9900;
     --priority-low: #00cc00;
@@ -25,3 +27,5 @@ html,
 body {
     background-color: var(--background-color);
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -9,5 +9,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
+signup() {
+throw new Error('Method not implemented.');
+}
 
 }

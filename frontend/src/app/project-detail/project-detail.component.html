@@ -75,8 +75,9 @@
       <label>Priority</label>
       <input
         type="text"
-        placeholder="Task Name"
-        [(ngModel)]="taskModalContext.task.name"
+        title="Task Name"
+        [(ngModel)]="taskModalContext.task.priority"
+        readonly
       />
     </div>
 
@@ -84,8 +85,9 @@
       <label>Status</label>
       <input
         type="text"
-        placeholder="Task Name"
-        [(ngModel)]="taskModalContext.task.name"
+        title="Status"
+        [(ngModel)]="taskModalContext.task.status"
+        readonly
       />
     </div>
 
@@ -93,13 +95,16 @@
       <label>Deadline</label>
       <input
         type="text"
-        placeholder="Task Name"
-        [(ngModel)]="taskModalContext.task.name"
+        title="Deadline"
+        [(ngModel)]="taskModalContext.task.dueDate"
+        readonly
       />
     </div>
 
-    <button class="cancel-btn">Cancel</button>
-    <button class="save-btn">Save</button>
+    <button class="cancel-btn" (click)="taskModalContext.isOpen = false">
+      Cancel
+    </button>
+    <button class="save-btn" (click)="saveTask()">Save</button>
   </div>
 </div>
 }
