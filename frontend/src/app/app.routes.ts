@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { authGuardFn } from './guards/auth.guard';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     {
@@ -15,11 +16,13 @@ export const routes: Routes = [
     },
     {
         path: 'projects',
-        component: ProjectsComponent
+        component: ProjectsComponent,
+        canActivate: [authGuardFn]
     },
     {
         path: 'projects/:id',
-        component: ProjectDetailComponent
+        component: ProjectDetailComponent,
+        canActivate: [authGuardFn]
     },
     {
         path: '**',

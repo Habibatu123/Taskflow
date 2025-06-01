@@ -1,12 +1,22 @@
 <main>
-    <form>
-        <label>Username</label>
-        <input type="text" name="username" placeholder="Enter your username" required>
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <label>Password</label>
-        <input type="password" name="password" placeholder="Enter your password" required>
-        <button type="submit">Signup</button>
-    </form>
-    <p>ALready have an account? <a routerLink="/signup">Login here</a></p>
+  <form>
+    <label>Username</label>
+    <input
+      type="text"
+      name="username"
+      placeholder="Enter your username"
+      required
+    />
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Enter your email" required />
+    <label>Password</label>
+    <input
+      type="password"
+      name="password"
+      placeholder="Enter your password"
+      required
+    />
+    <button (click)="signup()" type="submit">Signup</button>
+  </form>
+  <p>Already have an account? <a routerLink="/login">Login here</a></p>
 </main>

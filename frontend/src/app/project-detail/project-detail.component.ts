@@ -51,6 +51,10 @@ export class ProjectDetailComponent implements OnInit {
     this.taskModalContext.isOpen = true;
   }
 
+  saveTask() {
+    throw new Error('Method not implemented.');
+  }
+
   sortTasksByOrder(tasks: Task[]): Task[] {
     return tasks.slice().sort((a, b) => a.order - b.order);
   }
