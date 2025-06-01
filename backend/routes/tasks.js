@@ -1,7 +1,7 @@
 const express = require("express");
 const Task = require("../models/Task");
 const Project = require("../models/Project");
-const auth = require("../middleware/auth");
+const { verifyToken } = require("../middleware/auth");
 const router = express.Router();
 
 /**
@@ -59,7 +59,7 @@ const router = express.Router();
  *       500:
  *         description: Server error
  */
-router.post("/:projectId", auth, async (req, res) => {
+router.post("/:projectId", verifyToken, async (req, res) => {
   try {
     const { title, description, status, dueDate, priority, order } = req.body;
     if (!title || title.trim() === "") {
@@ -163,7 +163,7 @@ router.post("/:projectId", auth, async (req, res) => {
  *       500:
  *         description: Server error
  */
-router.put("/:taskId", auth, async (req, res) => {
+router.put("/:taskId", verifyToken, async (req, res) => {
   try {
     const { title, description, status } = req.body;
     const task = await Task.findById(req.params.taskId).populate("project");
@@ -251,7 +251,7 @@ router.put("/:taskId", auth, async (req, res) => {
  *       500:
  *         description: Server error
  */
-router.get("/:projectId", auth, async (req, res) => {
+router.get("/:projectId", verifyToken, async (req, res) => {
   try {
     const project = await Project.findById(req.params.projectId);
     if (!project) {

@@ -1,7 +1,7 @@
 const express = require("express");
 const Project = require("../models/Project");
 const Task = require("../models/Task");
-const auth = require("../middleware/auth");
+const { verifyToken } = require("../middleware/auth");
 const router = express.Router();
 
 /**
@@ -44,7 +44,7 @@ const router = express.Router();
  *       500:
  *         description: Server error
  */
-router.post("/", auth, async (req, res) => {
+router.post("/", verifyToken, async (req, res) => {
   try {
     // Check if user is Admin or Manager
     if (req.user.role !== "Admin" && req.user.role !== "Manager") {
@@ -130,7 +130,7 @@ router.post("/", auth, async (req, res) => {
  *       500:
  *         description: Server error
  */
-router.put("/:id", auth, async (req, res) => {
+router.put("/:id", verifyToken, async (req, res) => {
   try {
     // Check if user is Admin or Manager
     if (req.user.role !== "Admin" && req.user.role !== "Manager") {
@@ -201,7 +201,7 @@ router.put("/:id", auth, async (req, res) => {
  *       500:
  *         description: Server error
  */
-router.delete("/:id", auth, async (req, res) => {
+router.delete("/:id", verifyToken, async (req, res) => {
   try {
     // Check if user is Admin or Manager
     if (req.user.role !== "Admin" && req.user.role !== "Manager") {
@@ -261,7 +261,7 @@ router.delete("/:id", auth, async (req, res) => {
  *       500:
  *         description: Server error
  */
-router.get("/:id", auth, async (req, res) => {
+router.get("/:id", verifyToken, async (req, res) => {
   try {
     const project = await Project.findById(req.params.id)
       .populate("tasks")
@@ -326,7 +326,7 @@ router.get("/:id", auth, async (req, res) => {
  *       500:
  *         description: Server error
  */
-router.get("/", auth, async (req, res) => {
+router.get("/", verifyToken, async (req, res) => {
   try {
     let projects;
 
