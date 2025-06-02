@@ -1,41 +1,87 @@
 <main>
-  <nav>
-    <h1>Projects</h1>
-  </nav>
-
-  <div class="new-btn-wrapper">
-    <button>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <rect x="10" width="4" height="24" />
-        <rect
-          x="10"
-          width="4"
-          height="24"
-          transform="translate(24 0) rotate(90)"
-        />
-      </svg>
-      <span>New Project</span>
+  <mat-toolbar>
+    <span>Projects</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="fetchProjects()">
+      <mat-icon>refresh</mat-icon>
     </button>
-  </div>
+    <button mat-icon-button (click)="projectModalContext.isOpen = true">
+      <mat-icon>add</mat-icon>
+    </button>
+    <button mat-icon-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Created</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (project of projects; track $index) {
-      <tr>
-        <td>
-          <a [routerLink]="['/projects', project.id]">
-            {{ project.name }}
-          </a>
-        </td>
-        <td>{{ project.createdAt | date : "short" }}</td>
-      </tr>
-      }
-    </tbody>
+  <table mat-table [dataSource]="projects" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">
+        <a [routerLink]="['/projects', element.id]">
+          {{ element.name }}
+        </a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="createdAt">
+      <th mat-header-cell *matHeaderCellDef>Created</th>
+      <td mat-cell *matCellDef="let element">{{ element.createdAt }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          mat-icon-button
+          (click)="deleteProject(element)"
+          title="Delete Project"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="colunns"></tr>
+    <tr mat-row *matRowDef="let row; columns: colunns"></tr>
   </table>
 </main>
+
+@if(projectModalContext.isOpen) {
+<app-dialog (onDismiss)="projectModalContext.isOpen = false">
+  <div class="create-project-wrapper">
+    <div>
+      <mat-form-field>
+        <mat-label>Project Name</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Enter your project name"
+          [formControl]="projectModalContext.name"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Project Description</mat-label>
+        <textarea
+          matInput
+          title="description"
+          [formControl]="projectModalContext.description"
+        ></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="button-wrapper">
+      <button mat-button (click)="projectModalContext.isOpen = false">
+        Cancel
+      </button>
+      <button
+        mat-button
+        (click)="saveProject()"
+        [disabled]="projectModalContext.name.invalid"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</app-dialog>
+}

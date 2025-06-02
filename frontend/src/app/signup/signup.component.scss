@@ -1,4 +1,4 @@
-main{
+main {
     height: 100svh;
     width: 100%;
     display: flex;
@@ -8,15 +8,10 @@ main{
     flex-direction: column;
 }
 
-form{
+form {
     max-width: 400px;
-    
- input,
- button{
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
- }
+
+    button {
+        width: 100%;
+    }
 }

@@ -1,9 +1,21 @@
-import { Routes } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot, Routes } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
-import { authGuardFn } from './guards/auth.guard';
 import { LoginComponent } from './login/login.component';
+import { inject } from '@angular/core';
+
+export const authGuard: CanActivateFn = (
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+) => {
+    const router = inject(Router);
+    if (localStorage.getItem('accessToken')) {
+        return true;
+    }
+
+    return router.parseUrl('/login');
+}
 
 export const routes: Routes = [
     {
@@ -17,12 +29,12 @@ export const routes: Routes = [
     {
         path: 'projects',
         component: ProjectsComponent,
-        canActivate: [authGuardFn]
+        canActivate: [authGuard]
     },
     {
         path: 'projects/:id',
         component: ProjectDetailComponent,
-        canActivate: [authGuardFn]
+        canActivate: [authGuard]
     },
     {
         path: '**',

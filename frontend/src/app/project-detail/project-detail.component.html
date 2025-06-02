@@ -1,8 +1,19 @@
 <main>
   @if(project){
-  <nav>
-    <h1>{{ project.name }}</h1>
-  </nav>
+  <mat-toolbar>
+    <span>{{ project.name }}</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="fetchBoards()">
+      <mat-icon>refresh</mat-icon>
+    </button>
+    <button mat-icon-button (click)="modalContext.open = 'board'">
+      <mat-icon>add</mat-icon>
+    </button>
+    <button mat-icon-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
   <header>
     <h2>Boards</h2>
     <button>
@@ -58,16 +69,16 @@
   }
 </main>
 
-@if(taskModalContext.isOpen && taskModalContext.task){
+@if(modalContext.open == 'task' && modalContext.task){
 <div class="task-detail-wrapper">
-  <div class="backdrop" (click)="taskModalContext.isOpen = false"></div>
+  <div class="backdrop" (click)="modalContext.open = null"></div>
   <div class="task-detail">
     <div class="task-name-wrapper">
       <label>Task Name</label>
       <input
         type="text"
         placeholder="Task Name"
-        [(ngModel)]="taskModalContext.task.name"
+        [(ngModel)]="modalContext.task.name"
       />
     </div>
 
@@ -76,7 +87,7 @@
       <input
         type="text"
         title="Task Name"
-        [(ngModel)]="taskModalContext.task.priority"
+        [(ngModel)]="modalContext.task.priority"
         readonly
       />
     </div>
@@ -86,7 +97,7 @@
       <input
         type="text"
         title="Status"
-        [(ngModel)]="taskModalContext.task.status"
+        [(ngModel)]="modalContext.task.status"
         readonly
       />
     </div>
@@ -96,12 +107,12 @@
       <input
         type="text"
         title="Deadline"
-        [(ngModel)]="taskModalContext.task.dueDate"
+        [(ngModel)]="modalContext.task.dueDate"
         readonly
       />
     </div>
 
-    <button class="cancel-btn" (click)="taskModalContext.isOpen = false">
+    <button class="cancel-btn" (click)="modalContext.open = null">
       Cancel
     </button>
     <button class="save-btn" (click)="saveTask()">Save</button>

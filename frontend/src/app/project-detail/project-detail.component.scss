@@ -1,45 +1,13 @@
-nav {
-    height: 80px;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-
-    h1 {
-        font-size: 2.5rem;
-    }
-}
-
-button {
-    height: 60px;
-    min-width: 100px;
-    display: flex;
-    align-items: center;
-    column-gap: 16px;
-    padding: 0 16px;
-    background-color: var(--primary-color);
-    border: none;
-    color: var(--background-color);
-
-    svg {
-        height: 24px;
-        width: 24px;
-        fill: var(--background-color);
-    }
-
-    span {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-    }
-}
-
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px 40px;
     height: 80px;
+}
+
+.spacer {
+    flex: 1 1 auto;
 }
 
 .board-wrapper {
@@ -162,31 +130,13 @@ h2 {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.task-detail-wrapper {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100svh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-}
 
-.backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
+
 
 .task-detail {
-    z-index: 2;
-    width: 700px;
-    height: 500px;
-    background-color: var(--task-detail-card-color);
+
+
     padding: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;

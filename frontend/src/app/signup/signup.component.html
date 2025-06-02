@@ -1,22 +1,47 @@
 <main>
   <form>
-    <label>Username</label>
-    <input
-      type="text"
-      name="username"
-      placeholder="Enter your username"
-      required
-    />
-    <label>Email</label>
-    <input type="email" name="email" placeholder="Enter your email" required />
-    <label>Password</label>
-    <input
-      type="password"
-      name="password"
-      placeholder="Enter your password"
-      required
-    />
-    <button (click)="signup()" type="submit">Signup</button>
+    <p>{{ errorMessage }}</p>
+    <mat-form-field>
+      <mat-label>Fullname</mat-label>
+      <input
+        matInput
+        type="text"
+        name="fullname"
+        placeholder="Enter your full name"
+        [formControl]="form.controls.fullname"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        [formControl]="form.controls.email"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        name="password"
+        placeholder="Enter your password"
+        [formControl]="form.controls.password"
+      />
+    </mat-form-field>
+
+    <button
+      mat-button primary
+      (click)="signup()"
+      type="button"
+      [disabled]="form.invalid"
+    >
+      Signup
+    </button>
   </form>
   <p>Already have an account? <a routerLink="/login">Login here</a></p>
 </main>

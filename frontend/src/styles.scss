@@ -27,5 +27,17 @@ html,
 body {
     background-color: var(--background-color);
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Gabarito", sans-serif;
+}
+
+mat-form-field {
+    width: 100%;
+}
