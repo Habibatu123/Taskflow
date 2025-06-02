@@ -1,0 +1,66 @@
+<h2 mat-dialog-title>Create new Task</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder="Title"
+      [formControl]="form.controls.title"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Priority</mat-label>
+    <mat-select
+      required
+      [formControl]="form.controls.priority"
+      title="priority"
+    >
+      @for (priority of priorities; track $index) {
+      <mat-option value="{{ priority }}">{{ priority }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Status</mat-label>
+    <mat-select required [formControl]="form.controls.status" title="priority">
+      @for (status of statuses; track $index) {
+      <mat-option value="{{ status }}">{{ status }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Due date</mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      title="duedate"
+      [formControl]="form.controls.dueDate"
+    />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-label>Assigned</mat-label>
+  <mat-selection-list #assignedUsers>
+    @for (user of projectUsers; track user) {
+    <mat-list-option>{{ user.name }}</mat-list-option>
+    }
+  </mat-selection-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="dismiss()">Cancel</button>
+  @if(data.context == 'edit') {
+  <button mat-button (click)="updateTask()" [disabled]="form.invalid">
+    Edit
+  </button>
+  }@else if (data.context == 'create') {
+  <button mat-button (click)="saveTask()" [disabled]="form.invalid">
+    Create
+  </button>
+  }
+</mat-dialog-actions>

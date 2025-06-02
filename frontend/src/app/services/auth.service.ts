@@ -2,17 +2,11 @@ import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, of, tap } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { User } from './api.service';
 
 export class LoginCredential {
   email: string = '';
   password: string = '';
-}
-
-export class User {
-  id: string = '';
-  email: string = '';
-  name: string = '';
-  role: string = '';
 }
 
 export class AuthResponse {

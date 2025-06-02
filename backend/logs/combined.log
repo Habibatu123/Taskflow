@@ -1,0 +1,158 @@
+{"email":"me@gmail.com","level":"debug","message":"Login attempt:","timestamp":"2025-06-02T18:45:27.233Z"}
+{"email":"me@gmail.com","level":"debug","message":"Comparing password for user:","timestamp":"2025-06-02T18:45:27.320Z"}
+{"level":"info","message":"User logged in successfully:","timestamp":"2025-06-02T18:45:27.400Z","userId":"683cce338e1e17b765bb2328"}
+{"email":"me@gmail.com","error":"Maximum call stack size exceeded","level":"error","message":"Login error:","stack":"RangeError: Maximum call stack size exceeded\n    at get id (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\bson\\lib\\bson.cjs:2065:11)\n    at ObjectId.toHexString (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\bson\\lib\\bson.cjs:2078:48)\n    at ObjectId.toString (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\bson\\lib\\bson.cjs:2112:21)\n    at String (<anonymous>)\n    at Object.toLocalBufferType (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\bson\\lib\\bson.cjs:136:58)\n    at Object.toHex (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\bson\\lib\\bson.cjs:163:32)\n    at ObjectId.toHexString (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\bson\\lib\\bson.cjs:2078:37)\n    at ObjectId.toString (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\bson\\lib\\bson.cjs:2112:21)\n    at String (<anonymous>)\n    at Object.toLocalBufferType (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\bson\\lib\\bson.cjs:136:58)","timestamp":"2025-06-02T18:45:27.404Z"}
+{"email":"me@gmail.com","level":"debug","message":"Login attempt:","timestamp":"2025-06-02T18:46:11.376Z"}
+{"email":"me@gmail.com","level":"debug","message":"Comparing password for user:","timestamp":"2025-06-02T18:46:11.445Z"}
+{"level":"info","message":"User logged in successfully:","timestamp":"2025-06-02T18:46:11.529Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:46:11.594Z","userId":"683cce338e1e17b765bb2328"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:46:11.680Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:46:15.303Z","userId":"683cce338e1e17b765bb2328"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:46:15.364Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:46:16.138Z","userId":"683cce338e1e17b765bb2328"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:46:16.202Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:48:37.285Z","userId":"683cce338e1e17b765bb2328"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:48:37.355Z"}
+{"email":"me@gmail.com","level":"debug","message":"Login attempt:","timestamp":"2025-06-02T18:48:39.356Z"}
+{"email":"me@gmail.com","level":"debug","message":"Comparing password for user:","timestamp":"2025-06-02T18:48:39.419Z"}
+{"level":"info","message":"User logged in successfully:","timestamp":"2025-06-02T18:48:39.499Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:48:39.534Z","userId":"683cce338e1e17b765bb2328"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:48:39.595Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:48:40.774Z","userId":"683cce338e1e17b765bb2328"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:48:40.835Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:48:41.467Z","userId":"683cce338e1e17b765bb2328"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:48:41.528Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:49:10.127Z","userId":"683cce338e1e17b765bb2328"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:49:10.196Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:50:43.156Z","userId":"683cce338e1e17b765bb2328"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:50:43.235Z"}
+{"level":"debug","message":"Creating new project:","name":"fgfget","timestamp":"2025-06-02T18:50:53.672Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"info","message":"Project created successfully","projectId":"683df28d091d7bfda361a5ea","timestamp":"2025-06-02T18:50:53.753Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:50:53.804Z","userId":"683cce338e1e17b765bb2328"}
+{"count":2,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:50:53.865Z"}
+{"level":"debug","message":"Deleting project:","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T18:51:21.083Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"error","message":"Error deleting project: project.remove is not a function","stack":"TypeError: project.remove is not a function\n    at C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\src\\routes\\projects.js:112:19\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-06-02T18:51:21.144Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:51:23.888Z","userId":"683cce338e1e17b765bb2328"}
+{"count":2,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:51:23.950Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:51:26.183Z","userId":"683cce338e1e17b765bb2328"}
+{"count":2,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:51:26.246Z"}
+{"level":"debug","message":"Deleting project:","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T18:51:27.134Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"error","message":"Error deleting project: project.remove is not a function","stack":"TypeError: project.remove is not a function\n    at C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\src\\routes\\projects.js:112:19\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-06-02T18:51:27.200Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:56:17.389Z","userId":"683cce338e1e17b765bb2328"}
+{"count":2,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:56:17.451Z"}
+{"level":"debug","message":"Fetching project:","projectId":"683df28d091d7bfda361a5ea","timestamp":"2025-06-02T18:56:27.479Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"info","message":"Project fetched successfully","projectId":"683df28d091d7bfda361a5ea","timestamp":"2025-06-02T18:56:27.643Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T18:56:28.844Z","userId":"683cce338e1e17b765bb2328"}
+{"count":2,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T18:56:29.519Z"}
+{"level":"debug","message":"Fetching project:","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T18:56:30.431Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"info","message":"Project fetched successfully","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T18:56:30.590Z"}
+{"level":"debug","message":"Creating board:","name":"dsasdsa","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T19:05:34.648Z","userId":"683cce338e1e17b765bb2328"}
+{"hasName":true,"hasOrder":false,"hasProjectId":true,"level":"warn","message":"Missing required fields:","timestamp":"2025-06-02T19:05:34.651Z"}
+{"level":"debug","message":"Creating board:","name":"dsasdsa","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T19:06:52.721Z","userId":"683cce338e1e17b765bb2328"}
+{"board":{"_id":"683df64ccc585c27ac7648e3","createdAt":"2025-06-02T19:06:52.895Z","description":"dsa","name":"dsasdsa","order":0,"project":"683dee51ad5b83788feb64cb","tasks":[]},"level":"debug","message":"Saving board:","timestamp":"2025-06-02T19:06:52.895Z"}
+{"boardId":"683df64ccc585c27ac7648e3","level":"info","message":"Board created successfully:","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T19:06:53.036Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Fetching project:","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T19:06:53.189Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"info","message":"Project fetched successfully","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T19:06:53.323Z"}
+{"level":"debug","message":"Fetching project:","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T19:06:57.159Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"info","message":"Project fetched successfully","projectId":"683dee51ad5b83788feb64cb","timestamp":"2025-06-02T19:06:57.293Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T19:07:02.194Z","userId":"683cce338e1e17b765bb2328"}
+{"count":2,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T19:07:02.257Z"}
+{"level":"debug","message":"Creating new project:","name":"Web3","timestamp":"2025-06-02T19:07:15.912Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"info","message":"Project created successfully","projectId":"683df663cc585c27ac7648ef","timestamp":"2025-06-02T19:07:15.983Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T19:07:16.005Z","userId":"683cce338e1e17b765bb2328"}
+{"count":3,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T19:07:16.070Z"}
+{"level":"debug","message":"Fetching project:","projectId":"683df663cc585c27ac7648ef","timestamp":"2025-06-02T19:07:17.123Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"info","message":"Project fetched successfully","projectId":"683df663cc585c27ac7648ef","timestamp":"2025-06-02T19:07:17.248Z"}
+{"level":"debug","message":"Creating board:","name":"Somboad","projectId":"683df663cc585c27ac7648ef","timestamp":"2025-06-02T19:07:25.489Z","userId":"683cce338e1e17b765bb2328"}
+{"board":{"_id":"683df66dcc585c27ac7648f9","createdAt":"2025-06-02T19:07:25.615Z","description":null,"name":"Somboad","order":0,"project":"683df663cc585c27ac7648ef","tasks":[]},"level":"debug","message":"Saving board:","timestamp":"2025-06-02T19:07:25.615Z"}
+{"boardId":"683df66dcc585c27ac7648f9","level":"info","message":"Board created successfully:","projectId":"683df663cc585c27ac7648ef","timestamp":"2025-06-02T19:07:25.749Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Fetching project:","projectId":"683df663cc585c27ac7648ef","timestamp":"2025-06-02T19:07:25.883Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"info","message":"Project fetched successfully","projectId":"683df663cc585c27ac7648ef","timestamp":"2025-06-02T19:07:26.006Z"}
+{"boardId":"683df66dcc585c27ac7648f9","level":"debug","message":"Creating task:","priority":"Medium","status":"InProgress","timestamp":"2025-06-02T19:08:14.887Z","title":"das","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Saving task:","task":{"_id":"683df69f62cb3b78dd64d261","assignedTo":[],"board":"683df66dcc585c27ac7648f9","createdAt":"2025-06-02T19:08:15.089Z","dueDate":"2025-06-10T23:00:00.000Z","order":0,"priority":"Medium","status":"InProgress","title":"das"},"timestamp":"2025-06-02T19:08:15.090Z"}
+{"boardId":"683df66dcc585c27ac7648f9","level":"info","message":"Task created successfully:","taskId":"683df69f62cb3b78dd64d261","timestamp":"2025-06-02T19:08:15.242Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Fetching project:","projectId":"683df663cc585c27ac7648ef","timestamp":"2025-06-02T19:08:15.372Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"info","message":"Project fetched successfully","projectId":"683df663cc585c27ac7648ef","timestamp":"2025-06-02T19:08:15.562Z"}
+{"boardId":"683df66dcc585c27ac7648f9","level":"debug","message":"Creating task:","priority":"Medium","status":"Completed","timestamp":"2025-06-02T19:08:25.423Z","title":"rhtytregfdg","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Saving task:","task":{"_id":"683df6a962cb3b78dd64d26d","assignedTo":[],"board":"683df66dcc585c27ac7648f9","createdAt":"2025-06-02T19:08:25.605Z","dueDate":null,"order":1,"priority":"Medium","status":"Completed","title":"rhtytregfdg"},"timestamp":"2025-06-02T19:08:25.605Z"}
+{"body":{"assignedTo":[],"boardId":"683df66dcc585c27ac7648f9","dueDate":null,"priority":"Medium","status":"Completed","title":"rhtytregfdg"},"error":"Task validation failed: status: `Completed` is not a valid enum value for path `status`.","level":"error","message":"Error creating task:","stack":"ValidationError: Task validation failed: status: `Completed` is not a valid enum value for path `status`.\n    at Document.invalidate (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\document.js:3219:32)\n    at C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\document.js:3012:17\n    at C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-06-02T19:08:25.607Z","userId":"683cce338e1e17b765bb2328"}
+{"boardId":"683df66dcc585c27ac7648f9","level":"debug","message":"Creating task:","priority":"Medium","status":"Completed","timestamp":"2025-06-02T19:08:31.779Z","title":"rhtytregfdg","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Saving task:","task":{"_id":"683df6af62cb3b78dd64d272","assignedTo":[],"board":"683df66dcc585c27ac7648f9","createdAt":"2025-06-02T19:08:31.955Z","dueDate":"2025-06-10T23:00:00.000Z","order":1,"priority":"Medium","status":"Completed","title":"rhtytregfdg"},"timestamp":"2025-06-02T19:08:31.956Z"}
+{"body":{"assignedTo":[],"boardId":"683df66dcc585c27ac7648f9","dueDate":"2025-06-10T23:00:00.000Z","priority":"Medium","status":"Completed","title":"rhtytregfdg"},"error":"Task validation failed: status: `Completed` is not a valid enum value for path `status`.","level":"error","message":"Error creating task:","stack":"ValidationError: Task validation failed: status: `Completed` is not a valid enum value for path `status`.\n    at Document.invalidate (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\document.js:3219:32)\n    at C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\document.js:3012:17\n    at C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-06-02T19:08:31.957Z","userId":"683cce338e1e17b765bb2328"}
+{"boardId":"683df66dcc585c27ac7648f9","level":"debug","message":"Creating task:","priority":"Medium","status":"Completed","timestamp":"2025-06-02T19:08:35.229Z","title":"rhtytregfdg","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Saving task:","task":{"_id":"683df6b362cb3b78dd64d277","assignedTo":[],"board":"683df66dcc585c27ac7648f9","createdAt":"2025-06-02T19:08:35.404Z","dueDate":"2025-06-10T23:00:00.000Z","order":1,"priority":"Medium","status":"Completed","title":"rhtytregfdg"},"timestamp":"2025-06-02T19:08:35.404Z"}
+{"body":{"assignedTo":[],"boardId":"683df66dcc585c27ac7648f9","dueDate":"2025-06-10T23:00:00.000Z","priority":"Medium","status":"Completed","title":"rhtytregfdg"},"error":"Task validation failed: status: `Completed` is not a valid enum value for path `status`.","level":"error","message":"Error creating task:","stack":"ValidationError: Task validation failed: status: `Completed` is not a valid enum value for path `status`.\n    at Document.invalidate (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\document.js:3219:32)\n    at C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\document.js:3012:17\n    at C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-06-02T19:08:35.406Z","userId":"683cce338e1e17b765bb2328"}
+{"boardId":"683df66dcc585c27ac7648f9","level":"debug","message":"Creating task:","priority":"Medium","status":"Completed","timestamp":"2025-06-02T19:10:02.861Z","title":"rhtytregfdg","userId":"683cce338e1e17b765bb2328"}
+{"body":{"assignedTo":[],"boardId":"683df66dcc585c27ac7648f9","dueDate":"2025-06-10T23:00:00.000Z","priority":"Medium","status":"Completed","title":"rhtytregfdg"},"error":"Operation `boards.findOne()` buffering timed out after 10000ms","level":"error","message":"Error creating task:","stack":"MongooseError: Operation `boards.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)","timestamp":"2025-06-02T19:10:12.892Z","userId":"683cce338e1e17b765bb2328"}
+{"boardId":"683df66dcc585c27ac7648f9","level":"debug","message":"Creating task:","priority":"Medium","status":"Completed","timestamp":"2025-06-02T19:10:15.366Z","title":"rhtytregfdg","userId":"683cce338e1e17b765bb2328"}
+{"boardId":"683df66dcc585c27ac7648f9","level":"debug","message":"Creating task:","priority":"Medium","status":"Completed","timestamp":"2025-06-02T19:10:19.613Z","title":"rhtytregfdg","userId":"683cce338e1e17b765bb2328"}
+{"body":{"assignedTo":[],"boardId":"683df66dcc585c27ac7648f9","dueDate":"2025-06-10T23:00:00.000Z","priority":"Medium","status":"Completed","title":"rhtytregfdg"},"error":"Operation `boards.findOne()` buffering timed out after 10000ms","level":"error","message":"Error creating task:","stack":"MongooseError: Operation `boards.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)","timestamp":"2025-06-02T19:10:25.370Z","userId":"683cce338e1e17b765bb2328"}
+{"body":{"assignedTo":[],"boardId":"683df66dcc585c27ac7648f9","dueDate":"2025-06-10T23:00:00.000Z","priority":"Medium","status":"Completed","title":"rhtytregfdg"},"error":"Operation `boards.findOne()` buffering timed out after 10000ms","level":"error","message":"Error creating task:","stack":"MongooseError: Operation `boards.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)","timestamp":"2025-06-02T19:10:29.625Z","userId":"683cce338e1e17b765bb2328"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T19:11:22.845Z","userId":"683cce338e1e17b765bb2328"}
+{"email":"me@gmail.com","level":"debug","message":"Login attempt:","timestamp":"2025-06-02T19:11:25.149Z"}
+{"email":"me@gmail.com","level":"debug","message":"Registration attempt:","timestamp":"2025-06-02T19:11:28.746Z"}
+{"level":"error","message":"Error fetching projects: Operation `projects.find()` buffering timed out after 10000ms","stack":"MongooseError: Operation `projects.find()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)","timestamp":"2025-06-02T19:11:32.857Z"}
+{"error":"Operation `users.findOne()` buffering timed out after 10000ms","level":"error","message":"Login error:","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)","timestamp":"2025-06-02T19:11:35.158Z"}
+{"error":"Operation `users.findOne()` buffering timed out after 10000ms","level":"error","message":"Registration error:","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\sulmu\\source\\repos\\Toodo.API\\Toodo.Express.API\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)","timestamp":"2025-06-02T19:11:38.753Z"}
+{"level":"info","message":"Connecting to MongoDB...","timestamp":"2025-06-02T19:12:57.376Z","uri":"mongodb+srv://usr:yxHGu2qSsy5U9nUj@cluster0.czydhwd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"}
+{"level":"info","message":"Connected to MongoDB successfully","timestamp":"2025-06-02T19:12:58.217Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-02T19:12:58.324Z"}
+{"level":"info","message":"API Documentation available at http://localhost:3000/api-docs","timestamp":"2025-06-02T19:12:58.325Z"}
+{"level":"info","message":"Connecting to MongoDB...","timestamp":"2025-06-02T19:13:04.309Z","uri":"mongodb+srv://usr:yxHGu2qSsy5U9nUj@cluster0.czydhwd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"}
+{"level":"info","message":"Connected to MongoDB successfully","timestamp":"2025-06-02T19:13:06.625Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-02T19:13:06.732Z"}
+{"level":"info","message":"API Documentation available at http://localhost:3000/api-docs","timestamp":"2025-06-02T19:13:06.733Z"}
+{"email":"me@gmail.com","level":"debug","message":"Registration attempt:","timestamp":"2025-06-02T19:13:10.763Z"}
+{"email":"me@gmail.com","level":"debug","message":"Hashing password for user:","timestamp":"2025-06-02T19:13:10.867Z"}
+{"level":"info","message":"User registered successfully:","timestamp":"2025-06-02T19:13:11.021Z","userId":"683df7c65107788239598e35"}
+{"email":"me@gmail.com","level":"debug","message":"Login attempt:","timestamp":"2025-06-02T19:13:11.959Z"}
+{"email":"me@gmail.com","level":"debug","message":"Comparing password for user:","timestamp":"2025-06-02T19:13:12.023Z"}
+{"level":"info","message":"User logged in successfully:","timestamp":"2025-06-02T19:13:12.093Z","userId":"683df7c65107788239598e35"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T19:13:12.138Z","userId":"683df7c65107788239598e35"}
+{"count":0,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T19:13:12.197Z"}
+{"level":"debug","message":"Creating new project:","name":"Web3","timestamp":"2025-06-02T19:13:18.520Z","userId":"683df7c65107788239598e35"}
+{"level":"info","message":"Project created successfully","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:18.601Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-02T19:13:18.650Z","userId":"683df7c65107788239598e35"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-02T19:13:18.712Z"}
+{"level":"debug","message":"Fetching project:","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:19.501Z","userId":"683df7c65107788239598e35"}
+{"level":"info","message":"Project fetched successfully","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:19.939Z"}
+{"level":"debug","message":"Creating board:","name":"Lets goo","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:27.600Z","userId":"683df7c65107788239598e35"}
+{"board":{"_id":"683df7d75107788239598e43","createdAt":"2025-06-02T19:13:27.721Z","description":"bruhhh","name":"Lets goo","order":0,"project":"683df7ce5107788239598e39","tasks":[]},"level":"debug","message":"Saving board:","timestamp":"2025-06-02T19:13:27.721Z"}
+{"boardId":"683df7d75107788239598e43","level":"info","message":"Board created successfully:","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:27.850Z","userId":"683df7c65107788239598e35"}
+{"level":"debug","message":"Fetching project:","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:27.980Z","userId":"683df7c65107788239598e35"}
+{"level":"info","message":"Project fetched successfully","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:28.098Z"}
+{"boardId":"683df7d75107788239598e43","level":"debug","message":"Creating task:","priority":"Medium","status":"Completed","timestamp":"2025-06-02T19:13:35.706Z","title":"dsasd","userId":"683df7c65107788239598e35"}
+{"level":"debug","message":"Saving task:","task":{"_id":"683df7df5107788239598e4e","assignedTo":[],"board":"683df7d75107788239598e43","createdAt":"2025-06-02T19:13:35.945Z","dueDate":null,"order":0,"priority":"Medium","status":"Completed","title":"dsasd"},"timestamp":"2025-06-02T19:13:35.945Z"}
+{"boardId":"683df7d75107788239598e43","level":"info","message":"Task created successfully:","taskId":"683df7df5107788239598e4e","timestamp":"2025-06-02T19:13:36.096Z","userId":"683df7c65107788239598e35"}
+{"level":"debug","message":"Fetching project:","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:36.223Z","userId":"683df7c65107788239598e35"}
+{"level":"info","message":"Project fetched successfully","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:36.442Z"}
+{"boardId":"683df7d75107788239598e43","level":"debug","message":"Creating task:","priority":"High","status":"Pending","timestamp":"2025-06-02T19:13:41.566Z","title":"dsadsada","userId":"683df7c65107788239598e35"}
+{"level":"debug","message":"Saving task:","task":{"_id":"683df7e55107788239598e5a","assignedTo":[],"board":"683df7d75107788239598e43","createdAt":"2025-06-02T19:13:41.824Z","dueDate":null,"order":1,"priority":"High","status":"Pending","title":"dsadsada"},"timestamp":"2025-06-02T19:13:41.825Z"}
+{"boardId":"683df7d75107788239598e43","level":"info","message":"Task created successfully:","taskId":"683df7e55107788239598e5a","timestamp":"2025-06-02T19:13:41.983Z","userId":"683df7c65107788239598e35"}
+{"level":"debug","message":"Fetching project:","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:42.113Z","userId":"683df7c65107788239598e35"}
+{"level":"info","message":"Project fetched successfully","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:13:42.309Z"}
+{"level":"info","message":"Connecting to MongoDB...","timestamp":"2025-06-02T19:15:34.527Z","uri":"mongodb+srv://usr:yxHGu2qSsy5U9nUj@cluster0.czydhwd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"}
+{"level":"info","message":"Connected to MongoDB successfully","timestamp":"2025-06-02T19:15:35.336Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-02T19:15:35.453Z"}
+{"level":"info","message":"API Documentation available at http://localhost:3000/api-docs","timestamp":"2025-06-02T19:15:35.453Z"}
+{"level":"info","message":"Connecting to MongoDB...","timestamp":"2025-06-02T19:16:01.165Z","uri":"mongodb+srv://usr:yxHGu2qSsy5U9nUj@cluster0.czydhwd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"}
+{"level":"info","message":"Connected to MongoDB successfully","timestamp":"2025-06-02T19:16:02.133Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-02T19:16:02.232Z"}
+{"level":"info","message":"API Documentation available at http://localhost:3000/api-docs","timestamp":"2025-06-02T19:16:02.233Z"}
+{"level":"info","message":"Connecting to MongoDB...","timestamp":"2025-06-02T19:16:38.145Z","uri":"mongodb+srv://usr:yxHGu2qSsy5U9nUj@cluster0.czydhwd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"}
+{"level":"info","message":"Connected to MongoDB successfully","timestamp":"2025-06-02T19:16:38.953Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-02T19:16:39.072Z"}
+{"level":"info","message":"API Documentation available at http://localhost:3000/api-docs","timestamp":"2025-06-02T19:16:39.072Z"}
+{"level":"info","message":"Connecting to MongoDB...","timestamp":"2025-06-02T19:16:43.082Z","uri":"mongodb+srv://usr:yxHGu2qSsy5U9nUj@cluster0.czydhwd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"}
+{"level":"info","message":"Connected to MongoDB successfully","timestamp":"2025-06-02T19:16:43.853Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-02T19:16:43.948Z"}
+{"level":"info","message":"API Documentation available at http://localhost:3000/api-docs","timestamp":"2025-06-02T19:16:43.949Z"}
+{"level":"debug","message":"Updating task:","taskId":"683df7df5107788239598e4e","timestamp":"2025-06-02T19:16:47.494Z","updates":{"dueDate":null,"priority":"Medium","status":"Pending","title":"dsasd"},"userId":"683df7c65107788239598e35"}
+{"level":"debug","message":"Applying updates:","timestamp":"2025-06-02T19:16:47.682Z","updates":{"assignedTo":[],"dueDate":null,"priority":"Medium","status":"Pending","title":"dsasd"}}
+{"boardId":"683df7d75107788239598e43","level":"info","message":"Task updated successfully:","taskId":"683df7df5107788239598e4e","timestamp":"2025-06-02T19:16:47.755Z","userId":"683df7c65107788239598e35"}
+{"level":"debug","message":"Fetching project:","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:16:47.864Z","userId":"683df7c65107788239598e35"}
+{"level":"info","message":"Project fetched successfully","projectId":"683df7ce5107788239598e39","timestamp":"2025-06-02T19:16:48.059Z"}
+{"level":"info","message":"Connecting to MongoDB...","timestamp":"2025-06-02T20:01:47.660Z","uri":"mongodb+srv://usr:yxHGu2qSsy5U9nUj@cluster0.czydhwd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"}
+{"level":"info","message":"Connected to MongoDB successfully","timestamp":"2025-06-02T20:01:50.110Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-02T20:01:50.230Z"}
+{"level":"info","message":"API Documentation available at http://localhost:3000/api-docs","timestamp":"2025-06-02T20:01:50.231Z"}

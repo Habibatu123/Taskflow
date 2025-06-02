@@ -12,74 +12,26 @@ header {
 
 .board-wrapper {
     padding: 0 40px;
+    height: 100%;
+}
+
+.mat-grid-list {
+    height: calc(100svh - 128px);
 }
 
 ul.board-list {
     display: flex;
-    column-gap: 20px;
+    flex-direction: column;
+    row-gap: 20px;
+    overflow-x: auto;
+    height: 100%;
+    padding: 40px;
 }
 
-li.board-item {
-    display: block;
-    background-color: var(--card-color);
-    width: 300px;
-    padding: 20px;
-    height: fit-content;
-
-    button {
-        display: block;
-        width: 100%;
-        height: 38px;
-        font-size: 1rem;
-    }
-}
-
-.task-item {
-    display: grid;
-    padding: 10px;
-    background-color: var(--task-card-color);
-    grid-template-columns: 24px 1fr 80px;
-    grid-template-rows: auto auto 24px;
-    column-gap: 10px;
-    row-gap: 8px;
-    margin-bottom: 8px;
-    cursor: pointer;
-
-    svg {
-        grid-column: 1;
-        grid-row: 1;
-        height: 16px;
-        width: 16px;
-        fill: #666666;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .task-name {
-        grid-column: 2 / 4;
-        grid-row: 1/3;
-        font-size: 1rem;
-        font-weight: 500;
-    }
-
-    .priority {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-row: 3;
-        grid-column: 3;
-        height: 24px;
-        font-size: 1rem;
-        font-weight: 500;
-    }
-
-    .task-due-date {
-        display: flex;
-        align-items: center;
-        grid-column: 1/3;
-        grid-row: 3;
-        font-size: 0.9rem;
-    }
+.board-card {
+    // min-width: 300px;
+    // max-width: 300px;
+    width: 500px;
 }
 
 .priority.high {
@@ -97,25 +49,6 @@ li.board-item {
     color: #ffffff;
 }
 
-
-.board-name {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #666666;
-}
-
-.board-description {
-    font-size: 1rem;
-    color: #666666;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-}
-
 .cdk-drag-preview {
     border: none;
     box-sizing: border-box;
@@ -128,72 +61,4 @@ h2 {
 
 .cdk-drag-animating {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-
-
-
-
-.task-detail {
-
-
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 1fr 45px;
-    column-gap: 80px;
-    row-gap: 20px;
-
-    input {
-        display: block;
-        width: 100%;
-        height: 45px;
-        padding: 0 10px;
-        font-size: 1.5rem;
-        border: 1px solid var(--input-border-color);
-        background-color: var(--input-bg-color);
-    }
-
-    label {
-        display: block;
-        font-size: 1.5rem;
-        font-weight: 700;
-        padding-left: 10px;
-        margin-bottom: 10px;
-    }
-
-    .task-name-wrapper {
-        grid-column: 1 / 3;
-        grid-row: 1;
-    }
-
-    .task-deadline-wrapper {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    .cancel-btn {
-        grid-column: 1;
-        grid-row: 4;
-        background-color: #E6E6E6;
-        color: #1f1f1f;
-    }
-
-    .save-btn {
-        grid-column: 2;
-        grid-row: 4;
-        background-color: var(--primary-color);
-        color: var(--background-color);
-    }
-
-    .save-btn,
-    .cancel-btn {
-        height: 45px;
-        width: 100%;
-        font-size: 1.5rem;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }

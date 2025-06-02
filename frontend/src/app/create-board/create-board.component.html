@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>Create new Board</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Board Name</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder="Enter your board name"
+      [formControl]="form.controls.name"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Board Description</mat-label>
+    <textarea
+      matInput
+      placeholder="Enter your board description"
+      [formControl]="form.controls.description"
+    ></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="dismiss()">Cancel</button>
+  <button mat-button (click)="saveBoard()" cdkFocusInitial>Create</button>
+</mat-dialog-actions>

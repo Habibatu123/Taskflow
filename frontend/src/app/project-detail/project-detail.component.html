@@ -1,121 +1,71 @@
 <main>
   @if(project){
   <mat-toolbar>
-    <span>{{ project.name }}</span>
-    <span class="spacer"></span>
-    <button mat-icon-button (click)="fetchBoards()">
-      <mat-icon>refresh</mat-icon>
-    </button>
-    <button mat-icon-button (click)="modalContext.open = 'board'">
-      <mat-icon>add</mat-icon>
-    </button>
-    <button mat-icon-button (click)="logout()">
-      <mat-icon>logout</mat-icon>
-    </button>
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="navigateAway()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>{{ project.name }}</span>
+    </mat-toolbar-row>
+
+    @if(project.description){
+    <mat-toolbar-row>
+      <span class="project-description">{{ project.description }}</span>
+    </mat-toolbar-row>
+    }
+
+    <mat-toolbar-row>
+      <span>Boards</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="fetchBoards()">
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <button mat-icon-button (click)="openCreateBoardDialog()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-toolbar-row>
   </mat-toolbar>
 
-  <header>
-    <h2>Boards</h2>
-    <button>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <rect x="10" width="4" height="24" />
-        <rect
-          x="10"
-          width="4"
-          height="24"
-          transform="translate(24 0) rotate(90)"
-        />
-      </svg>
-      <span>New Board</span>
-    </button>
-  </header>
-  <div class="board-wrapper">
-    <ul class="board-list">
-      @for (board of project.boards; track $index) {
-      <li class="board-item">
-        <p class="board-name">{{ board.name }}</p>
-        @if(board.description){
-        <p class="board-description">{{ board.description }}</p>
-        }
-        <div
-          cdkDropList
-          class="task-list"
-          (cdkDropListDropped)="taskDrop($event, board)"
-        >
-          @for (task of sortTasksByOrder(board.tasks); track task) {
-          <div cdkDrag class="task-item" (click)="selectTask(task)">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path
-                d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,12.67A4.67,4.67,0,1,1,12.66,8,4.67,4.67,0,0,1,8,12.67Z"
-              />
-            </svg>
-            <p class="task-name">{{ task.name }}</p>
-            @if(task.dueDate){
-            <span class="task-due-date"
-              >Due: {{ task.dueDate | date : "short" }}</span
+  <ul class="board-list" cdkDropList (cdkDropListDropped)="boardDrop($event)">
+    @for (board of project.boards; track $index) {
+    <div cdkDrag>
+      <mat-card class="board-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>{{ board.name }}</mat-card-title>
+          <mat-card-subtitle>{{ board.description }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list
+            role="list"
+            cdkDropList
+            (cdkDropListDropped)="taskDrop($event, board)"
+          >
+            @for (task of board.tasks; track $index) {
+            <mat-list-item
+              cdkDrag
+              role="listitem"
+              (click)="selectTask(board.id, task)"
+              matRipple
             >
+              <mat-icon
+                matListItemIcon
+                [style.color]="task.status == statuses.Completed ? 'green' : ''"
+                >check_circle</mat-icon
+              >
+              <span matLine>{{ task.title }}</span>
+            </mat-list-item>
             }
-            <span class="priority" [ngClass]="task.priority">{{
-              task.priority
-            }}</span>
-          </div>
-          }
-        </div>
-        <button>New Task</button>
-      </li>
-      }
-    </ul>
-  </div>
+          </mat-list>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="openCreateTaskDialog(board.id)">
+            New Task
+          </button>
+          <button mat-button (click)="deleteBoard(board)">Delete</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    }
+  </ul>
   }
 </main>
-
-@if(modalContext.open == 'task' && modalContext.task){
-<div class="task-detail-wrapper">
-  <div class="backdrop" (click)="modalContext.open = null"></div>
-  <div class="task-detail">
-    <div class="task-name-wrapper">
-      <label>Task Name</label>
-      <input
-        type="text"
-        placeholder="Task Name"
-        [(ngModel)]="modalContext.task.name"
-      />
-    </div>
-
-    <div class="task-priority-wrapper">
-      <label>Priority</label>
-      <input
-        type="text"
-        title="Task Name"
-        [(ngModel)]="modalContext.task.priority"
-        readonly
-      />
-    </div>
-
-    <div class="task-status-wrapper">
-      <label>Status</label>
-      <input
-        type="text"
-        title="Status"
-        [(ngModel)]="modalContext.task.status"
-        readonly
-      />
-    </div>
-
-    <div class="task-deadline-wrapper">
-      <label>Deadline</label>
-      <input
-        type="text"
-        title="Deadline"
-        [(ngModel)]="modalContext.task.dueDate"
-        readonly
-      />
-    </div>
-
-    <button class="cancel-btn" (click)="modalContext.open = null">
-      Cancel
-    </button>
-    <button class="save-btn" (click)="saveTask()">Save</button>
-  </div>
-</div>
-}
