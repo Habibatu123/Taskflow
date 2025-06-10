@@ -345,3 +345,9 @@
 {"boardId":"68481965fda959f38dcf3815","level":"info","message":"Board deleted successfully","timestamp":"2025-06-10T11:39:18.933Z"}
 {"level":"debug","message":"Fetching project:","projectId":"6848195dfda959f38dcf380b","timestamp":"2025-06-10T11:39:18.951Z","userId":"683e251b543d9ad7c769133f"}
 {"level":"info","message":"Project fetched successfully","projectId":"6848195dfda959f38dcf380b","timestamp":"2025-06-10T11:39:19.065Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-10T11:40:15.240Z","userId":"683e251b543d9ad7c769133f"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-10T11:40:15.296Z"}
+{"level":"debug","message":"Fetching project:","projectId":"6848195dfda959f38dcf380b","timestamp":"2025-06-10T11:40:17.124Z","userId":"683e251b543d9ad7c769133f"}
+{"level":"info","message":"Project fetched successfully","projectId":"6848195dfda959f38dcf380b","timestamp":"2025-06-10T11:40:17.237Z"}
+{"level":"debug","message":"Fetching projects for user:","timestamp":"2025-06-10T11:40:18.137Z","userId":"683e251b543d9ad7c769133f"}
+{"count":1,"level":"info","message":"Projects fetched successfully","timestamp":"2025-06-10T11:40:18.193Z"}
