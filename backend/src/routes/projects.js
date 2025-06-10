@@ -167,7 +167,7 @@ router.delete('/:id', auth, async (req, res, next) => {
       return next(new AppError('Only managers can delete projects', 403));
     }
 
-    await project.remove();
+    await Project.deleteOne({ _id: req.params.id });
     logger.info('Project deleted successfully', { projectId: req.params.id });
     res.status(204).send();
   } catch (error) {

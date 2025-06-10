@@ -22,6 +22,12 @@ const transformDocument = (doc) => {
       continue;
     }
     
+    // Handle dates
+    if (value instanceof Date) {
+      transformed[key] = value.toISOString();
+      continue;
+    }
+    
     // Handle nested objects
     if (value && typeof value === 'object' && !Array.isArray(value)) {
       transformed[key] = transformDocument(value);
